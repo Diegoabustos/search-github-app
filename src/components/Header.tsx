@@ -7,39 +7,42 @@ export interface HeaderProps {
 
 const Header: React.SFC<HeaderProps> = () => {
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div className="navbar-brand">
-                <a className="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-                </a>
-                <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-start">
-                    <a className="navbar-item">
-                        Home
-                    </a>
-                </div>
-
-                <div className="navbar-end">
-                    <div className="navbar-item">
-                        <div className="buttons">
-                            <a className="button is-primary">
-                                <strong>Users</strong>
-                            </a>
-                            <a className="button is-light">
-                                Repos
-                            </a>
+        <div className="hero-head">
+            <nav className="navbar">
+                <div className="container">
+                    <div className="navbar-brand">
+                        <a className="navbar-item" href="../">
+                            <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo"/>
+                        </a>
+                        <span className="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div className="navbar-menu">
+                        <div className="navbar-end">
+                            <span className="navbar-item">
+                                <a className="button is-white is-outlined" href="#">
+                                    <span className="icon">
+                                        <i className="fa fa-home"></i>
+                                    </span>
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <span className="navbar-item">
+                                <a className="button is-white is-outlined" href="#">
+                                    <span className="icon">
+                                        <i className="fa fa-superpowers"></i>
+                                    </span>
+                                    <span>Examples</span>
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     );
 }
 
