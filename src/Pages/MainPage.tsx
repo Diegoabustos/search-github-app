@@ -10,7 +10,7 @@ const MainPage: React.SFC<MainPageProps> = () => {
         <>
         <Header />
         <div>
-            Tittle and description to the App and Routes to search by repos or profles
+            Tittle and description to the App and Routes to search by repos or profles.
         </div>
         </>
      );
