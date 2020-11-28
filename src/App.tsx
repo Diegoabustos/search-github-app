@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from './components/Header';
 
 function App() {
   return (
     <div>
-      Search App to GitHub users and Repos
+      <Header />
     </div>
   );
 }
