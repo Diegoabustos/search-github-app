@@ -9,7 +9,7 @@ const CardProfile: React.SFC<CardProfileProps> = () => {
     return ( 
       <section className="container">
         <div className="columns feature">
-          <div className="column is-12">
+          <div className="column is-4">
             <div className="card is-shady">
               <div className="card-image">
                 <figure className="image is-4by3">

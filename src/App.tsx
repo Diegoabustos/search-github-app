@@ -1,11 +1,11 @@
 import React from 'react';
-import ProfilePage from './Pages/ProfilePage';
+import RepositoriesPage from './Pages/RepositoriesPage';
 
 function App() {
   return (
     <>
     <div>
-      <ProfilePage />
+      <RepositoriesPage />
     </div>
     </>
   );
