@@ -19,17 +19,17 @@ const MainPage: React.SFC<MainPageProps> = () => {
                                 $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
                         </h2>
                         <div className="box">
-                                <div className="field is-grouped">
-                                    <p className="control is-expanded">
-                                        <input className="input" type="text" placeholder="Enter your email"/>
-                                    </p>
-                                    <p className="control">
-                                        <a className="button is-info">
-                                            Notify Me
-                                        </a>
-                                    </p>
-                                </div>
+                            <div className="field is-grouped">
+                                <p className="control is-expanded">
+                                    <input className="input" type="text" placeholder="Enter your email"/>
+                                </p>
+                                <p className="control">
+                                    <a className="button is-info">
+                                        Notify Me
+                                    </a>
+                                </p>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>

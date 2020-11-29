@@ -10,8 +10,18 @@ export interface FormProfileContainerProps {
 const FormProfileContainer: React.SFC<FormProfileContainerProps> = () => {
     return ( 
         <>
-            <SearchField />
-            <SearchButton />
+        <div className="box">
+                            <div className="field is-grouped">
+                                <p className="control is-expanded">
+                                <SearchField />
+                                </p>
+                                <p className="control">
+                                <SearchButton />
+                                </p>
+                            </div>
+                        </div>
+            
+            
         </>
      );
 }

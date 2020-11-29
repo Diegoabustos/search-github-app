@@ -1,11 +1,11 @@
 import React from 'react';
-import MainPage from './Pages/MainPage';
+import ProfilePage from './Pages/ProfilePage';
 
 function App() {
   return (
     <>
     <div>
-      <MainPage />
+      <ProfilePage />
     </div>
     </>
   );
