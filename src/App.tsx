@@ -1,11 +1,11 @@
 import React from 'react';
-import MainPage from './Pages/MainPage';
+import RepositoriesPage from './Pages/RepositoriesPage';
 
 function App() {
   return (
     <>
     <div>
-      <MainPage />
+      <RepositoriesPage />
     </div>
     </>
   );

@@ -7,35 +7,28 @@ export interface CardProfileProps {
  
 const CardProfile: React.SFC<CardProfileProps> = () => {
     return ( 
-        <div className="card">
-  <div className="card-image">
-    <figure className="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"/>
-    </figure>
-  </div>
-  <div className="card-content">
-    <div className="media">
-      <div className="media-left">
-        <figure className="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"/>
-        </figure>
-      </div>
-      <div className="media-content">
-        <p className="title is-4">John Smith</p>
-        <p className="subtitle is-6">@johnsmith</p>
-      </div>
-    </div>
-
-    <div className="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br/>
-      <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-    </div>
-  </div>
-</div>
-     );
+      <section className="container">
+        <div className="columns feature">
+          <div className="column is-4">
+            <div className="card is-shady">
+              <div className="card-image">
+                <figure className="image is-4by3">
+                  <img src="https://source.unsplash.com/RWnpyGtY1aU" alt="Placeholder image" className="modal-button" data-target="modal-image2"/>
+                </figure>
+              </div>
+              <div className="card-content">
+                <div className="content">
+                  <h4>Click on image above</h4>
+                  <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
+                  <span className="button is-link modal-button" data-target="modal-image2">Image modal</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    );
 }
  
 export default CardProfile;
