@@ -1,6 +1,8 @@
 import {
     ENTER_PROFILE,
-    VALUE_PROFILE
+    VALUE_PROFILE,
+    INFO_USER,
+    INFO_REPOS
 } from '../../types';
 
 export default (state: any, action:any) => {
@@ -14,6 +16,16 @@ export default (state: any, action:any) => {
             return {
                 ...state,
                 valueProfile: action.payload
+            }
+        case INFO_USER:
+            return {
+                ...state,
+                profileInfo: action.payload
+            }
+        case INFO_REPOS:
+            return {
+                ...state,
+                repositoriesInfo: action.payload
             }
         default:
             return state;

@@ -4,7 +4,9 @@ interface PrContextProps {
     enterProfile: string;
     valueProfile: string;
     enterProfileFn: any;
-    profileValueFn: any
+    profileValueFn: any;
+    profileInfoFn: any;
+    repositoriesInfoFn: any;
 }
 
 const profileContext = createContext({} as PrContextProps);

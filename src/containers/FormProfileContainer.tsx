@@ -2,6 +2,8 @@ import React from 'react'
 import SearchField from '../components/SearchField'
 import SearchButton from '../components/SearchButton'
 import profileContext from '../context/profiles/profileContext'
+import axios from 'axios';
+
 
 
 export interface FormProfileContainerProps {
@@ -11,12 +13,27 @@ export interface FormProfileContainerProps {
 const FormProfileContainer: React.SFC<FormProfileContainerProps> = () => {
 
     const profilesContext = React.useContext(profileContext);
-    const { enterProfile } = profilesContext;
+    const { enterProfile, profileInfoFn, repositoriesInfoFn } = profilesContext;
+
+    const [ profile, setProfile, ] = React.useState('')
 
 
-    const onSubmit = ( e:any) => {
-        e.preventDefault()
-        console.log('data', enterProfile)
+    React.useEffect(() => {
+        if (enterProfile) {
+            setProfile(enterProfile)
+        }
+
+    }, [enterProfile])
+
+
+    const onSubmit = async (e: any) => {
+        e.preventDefault();
+        const url = `https://api.github.com/users/${profile}`
+        const urlRepos = `https://api.github.com/users/${profile}/repos`
+        const response = await axios.get(url)
+        const responseRepos = await axios.get(urlRepos)
+        profileInfoFn(response)
+        repositoriesInfoFn(responseRepos)
     }
     return ( 
         <form onSubmit={onSubmit}>

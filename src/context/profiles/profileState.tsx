@@ -3,14 +3,18 @@ import profileContext from './profileContext';
 import profileReducer from './profileReducer';
 import {
     ENTER_PROFILE,
-    VALUE_PROFILE
+    VALUE_PROFILE,
+    INFO_USER,
+    INFO_REPOS,
 } from '../../types';
 
 
 const ProfileState = (props: any) => {
     const initialState = {
         enterProfile: '',
-        valueProfile: ''
+        valueProfile: '',
+        profileInfo: [],
+        repositoriesInfo: []
     };
 
     // Dispatch to execute the actions
@@ -31,13 +35,28 @@ const ProfileState = (props: any) => {
         })
     }
 
+    const profileInfoFn = (response: any) => {
+      dispatch({
+          type: INFO_USER,
+          payload: response
+      })
+  }
+  const repositoriesInfoFn = (responseRepos: any) => {
+      dispatch({
+          type: INFO_REPOS,
+          payload: responseRepos
+      })
+  }
+
     return (
         <profileContext.Provider
           value={{
             enterProfile: state.enterProfile,
             valueProfile: state.valueProfile,
             enterProfileFn,
-            profileValueFn
+            profileValueFn,
+            profileInfoFn,
+            repositoriesInfoFn,
           }}
         >
           {props.children}
