@@ -7,6 +7,8 @@ interface PrContextProps {
     profileValueFn: any;
     profileInfoFn: any;
     repositoriesInfoFn: any;
+    repositoriesInfo: any;
+    profileInfo: any
 }
 
 const profileContext = createContext({} as PrContextProps);

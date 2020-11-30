@@ -13,8 +13,8 @@ const ProfileState = (props: any) => {
     const initialState = {
         enterProfile: '',
         valueProfile: '',
-        profileInfo: [],
-        repositoriesInfo: []
+        profileInfo: '',
+        repositoriesInfo: ''
     };
 
     // Dispatch to execute the actions
@@ -53,6 +53,8 @@ const ProfileState = (props: any) => {
           value={{
             enterProfile: state.enterProfile,
             valueProfile: state.valueProfile,
+            repositoriesInfo: state.repositoriesInfo,
+            profileInfo: state.profileInfo,
             enterProfileFn,
             profileValueFn,
             profileInfoFn,
