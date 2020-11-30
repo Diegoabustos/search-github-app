@@ -1,0 +1,2 @@
+export const ENTER_PROFILE = 'ENTER_PROFILE';
+export const VALUE_PROFILE = 'VALUE_PROFILE';
