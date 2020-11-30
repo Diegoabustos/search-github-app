@@ -1,13 +1,14 @@
 import React from 'react';
-import RepositoriesPage from './Pages/RepositoriesPage';
+import MainPage from './Pages/MainPage';
+import ProfileState from './context/profiles/profileState'
 
 function App() {
   return (
-    <>
+    <ProfileState>
     <div>
-      <RepositoriesPage />
+      <MainPage />
     </div>
-    </>
+    </ProfileState>
   );
 }
 

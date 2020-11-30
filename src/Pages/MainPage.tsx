@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
+import FormProfileContainer from '../containers/FormProfileContainer'
+
 
 export interface MainPageProps {
     
@@ -18,18 +20,7 @@ const MainPage: React.SFC<MainPageProps> = () => {
                         <h2 className="subtitle">
                                 $this is the best software platform for running an internet business. We handle billions of dollars every year for forward-thinking businesses around the world.
                         </h2>
-                        <div className="box">
-                            <div className="field is-grouped">
-                                <p className="control is-expanded">
-                                    <input className="input" type="text" placeholder="Enter your email"/>
-                                </p>
-                                <p className="control">
-                                    <a className="button is-info">
-                                        Notify Me
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
+                        <FormProfileContainer />
                     </div>
                 </div>
             </div>
